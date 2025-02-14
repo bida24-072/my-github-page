@@ -31,27 +31,41 @@
   </main>
  <!DOCTYPE html>
 <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Background Image Example</title>
+  <title>Car Rims Background</title>
   <style>
     body {
-      background-image: url[https://i.pinimg.com/736x/9f/24/ef/9f24ef009dbb1d3b7f85031fc157657b.jpg];
-      background-size: cover; /* Makes the image cover the entire background */
-      background-position: center; /* Centers the background image */
+      background-image: url('https://example.com/pink-car-rim.jpg'), url('https://example.com/blue-car-rim.jpg');
+      background-position: top left, bottom right; /* Position the rims in opposite corners */
+      background-size: 20% 20%, 20% 20%; /* Adjust the size of the rims */
+      background-repeat: no-repeat, no-repeat; /* Ensure the rims don't repeat */
+      height: 100vh; /* Full viewport height */
+      margin: 0; /* Remove default margin */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      font-size: 2em;
     }
   </style>
 </head>
+
 <body>
-  
-  
+  <h1>Welcome to My Car Collection!</h1>
+  <p>This page has a background with pink and blue car rims!</p>
 </body>
+
 </html>
 
-  <footer>
-    <p>&copy; 2025 Theo Arnold Gaopalelwe</p>
-  </footer>
 </body>
 
 </html>

@@ -1,42 +1,57 @@
-<!DOCTYPE html>
 
-  <B>
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ARNOLD GARAGE</title>
-    <B></B>
   <style>
     body {
-      background-image: url(https://th.bing.com/th/id/OIP.IDUJKf1YYPOLGarjttYakAHaE8?w=1170&h=780&rs=1&pid=ImgDetMain'), 
+      background-image: url(https://th.bing.com/th/id/OIP.IDUJKf1YYPOLGarjttYakAHaE8?w=1170&h=780&rs=1&pid=ImgDetMain),
                         url(https://th.bing.com/th/id/OIP.IDUJKf1YYPOLGarjttYakAHaE8?w=1170&h=780&rs=1&pid=ImgDetMain');
-      background-position: top left, bottom right; /* Position the rims in opposite corners */
-      background-size: 20% 20%, 20% 20%; /* Adjust the size of the rims */
-      background-repeat: no-repeat, no-repeat; /* Ensure the rims don't repeat */
-      height: 100vh; /* Full viewport height */
-      margin: 0; /* Remove default margin */
+      background-position: top left, bottom right;
+      background-size: 20% 20%, 20% 20%;
+      background-repeat: no-repeat, no-repeat;
+      height: 100vh;
+      margin: 0;
       font-family: Arial, sans-serif;
       display: flex;
       flex-direction: column;
-      align-items: side;
+      align-items: center;
       justify-content: flex-start;
-      color: blue;
+      color: red;
+      scroll-behavior: smooth;
     }
 
     h1 {
       font-size: 2em;
       text-align: center;
       margin-top: 50px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
     }
 
     main {
-      text-align: sides of cars;
+      text-align: center;
       margin: 50px;
     }
 
     img {
-      max-width: 400px; /* Set a maximum width for the images */
-      width: 75%; /* Ensure the images scale down to 75% of their container */
-      height: auto; /* Maintain aspect ratio */
-      margin: 15px; /* Space between images */
-      border-radius: 10px; /* Optional: Add rounded corners */
+      max-width: 400px;
+      width: 75%;
+      height: auto;
+      margin: 15px;
+      border-radius: 10px;
     }
 
     footer {
@@ -47,6 +62,72 @@
     p {
       font-size: 1.2em;
       margin-bottom: 20px;
+    }
+
+    /* Carousel Styles */
+    .carousel {
+      position: relative;
+      width: 80%;
+      margin: auto;
+      overflow: hidden;
+    }
+
+    .carousel-img {
+      width: 100%;
+      display: none;
+    }
+
+    .carousel-img:first-child {
+      display: block;
+    }
+
+    /* Contact Form Styles */
+    form {
+      text-align: left;
+      width: 300px;
+      margin: 20px auto;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border-radius: 4px;
+      border: 1px solid #ddd;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #555;
+    }
+
+    /* Table Styles */
+    table {
+      width: 80%;
+      margin: 30px auto;
+      border-collapse: collapse;
+      text-align: center;
+    }
+
+    table, th, td {
+      border: 1px solid black;
+    }
+
+    th, td {
+      padding: 12px;
     }
   </style>
 </head>
@@ -62,32 +143,83 @@
     <p>My love for cars is big, ain't gonna lie!</p>
 
     <p>Here's a picture of my first car:</p>
-    <img src="https://i.ytimg.com/vi/tjFr0l4hBdw/maxresdefault.jpg" alt="A perfect car">
-    
+    <div class="carousel">
+      <img src="https://i.ytimg.com/vi/tjFr0l4hBdw/maxresdefault.jpg" alt="A perfect car" class="carousel-img">
+      <img src="https://th.bing.com/th/id/R.1fa9ec0b930fce2987bc334d1aa1e7ab?rik=BkTZINmWjY%2fkYA&pid=ImgRaw&r=" alt="Lamborghini Urus" class="carousel-img">
+      <img src="https://www.millermotorcars.com/imagetag/3162/3/l/Used-2019-Rolls-Royce-Cullinan.jpg" alt="Rolls-Royce Cullinan" class="carousel-img">
+    </div>
 
     <p>My second car from my collection follows; the Lamborghini Urus:</p>
-    <img src="https://th.bing.com/th/id/R.1fa9ec0b930fce2987bc334d1aa1e7ab?rik=BkTZINmWjY%2fkYA&pid=ImgRaw&r=" alt="Speed motor">
-        <p>maouvering around town with baby feels like living the dream because i can ride it fast just to flex in the streets and feeling the comfortability the car serves<p>
+    <p>Manoeuvring around town with my Lamborghini feels like living the dream because I can ride it fast just to flex in the streets and feel the comfort it serves.</p>
 
+    <p>My gold baby is the heart of my collection.</p>
 
-
-
-          
-    <p>My interest in cars goes for the speedy ones, those that are off-road, luxury cars, and vintage ones. Speaking of luxury cars, I want to buy a Rolls-Royce Cullinan. It’s so cool and classic!</p>
-
-  
     <img src="https://i.pinimg.com/originals/61/93/72/619372c7f0208ca87fdff84338dd37c1.jpg" alt="best car ever">
-           <p>My gold baby is the heart of my collection.</p>
+
+    <p>I’m also aiming to buy a Rolls-Royce Cullinan. It’s so cool and classic!</p>
+
     <img src="https://www.millermotorcars.com/imagetag/3162/3/l/Used-2019-Rolls-Royce-Cullinan.jpg" alt="Rolls-Royce Cullinan">
+
+    <section id="specs">
+      <h2>Car Specifications</h2>
+      <table>
+        <tr>
+          <th>Car Model</th>
+          <th>Engine</th>
+          <th>Horsepower</th>
+        </tr>
+        <tr>
+          <td>Lamborghini Urus</td>
+          <td>V8 Twin-Turbo</td>
+          <td>650 HP</td>
+        </tr>
+        <tr>
+          <td>Rolls-Royce Cullinan</td>
+          <td>V12 Twin-Turbo</td>
+          <td>563 HP</td>
+        </tr>
+      </table>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form action="submit_form.php" method="post">
+        <label for="name">Your Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="email">Your Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+        <input type="submit" value="Submit">
+      </form>
+    </section>
+
+    <section id="social-share">
+      <h2>Share Your Ride</h2>
+      <button onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href))">
+        Share on Facebook
+      </button>
+      <button onclick="window.open('https://twitter.com/intent/tweet?url=' + encodeURIComponent(window.location.href))">
+        Share on Twitter
+      </button>
+    </section>
+
   </main>
-         <p>My interest in cars goes for the speedy ones, those that are off-road, luxury cars, and vintage ones. Speaking of luxury cars, I want to buy a Rolls-Royce Cullinan. It’s so cool and classic!</p>
 
   <footer>
-    <p>&copy; 2025
-      Mr Theo Arnold Gaopalelwe</p>
+    <p>&copy; 2025 Mr Theo Arnold Gaopalelwe</p>
   </footer>
+
+  <script>
+    let currentIndex = 0;
+    const images = document.querySelectorAll('.carousel-img');
+
+    setInterval(() => {
+      images[currentIndex].style.display = 'none';
+      currentIndex = (currentIndex + 1) % images.length;
+      images[currentIndex].style.display = 'block';
+    }, 3000);
+  </script>
+
 </body>
 
 </html>
-
-  
+ 

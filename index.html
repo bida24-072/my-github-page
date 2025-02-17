@@ -8,7 +8,7 @@
   <style>
     /* Set the background image for the body */
     body {
-      background-image: url(https://th.bing.com/th?&id=OVP.5ACW1I0twgTheS5OmycY0AHgFo&w=276&h=154&c=7&pid=2.1&rs=1); /* Change this to the car image you want */
+      background-image: url(https://th.bing.com/th?&id=OVP.5ACW1I0twgTheS5OmycY0AHgFo&w=276&h=154&c=7&pid=2.1&rs=1);
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
@@ -31,8 +31,8 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.5); /* Dark transparent overlay */
-      z-index: 1; /* Ensures the overlay stays behind content */
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
     }
 
     /* Main header style */
@@ -41,7 +41,7 @@
       text-align: center;
       margin-top: 50px;
       animation: fadeIn 2s ease-in-out;
-      z-index: 2; /* Make sure text stays above the overlay */
+      z-index: 2;
       position: relative;
     }
 
@@ -57,12 +57,12 @@
 
     /* Main content area */
     main {
-      z-index: 2; /* Content sits above the background/overlay */
+      z-index: 2;
       position: relative;
       text-align: center;
       margin: 50px;
       padding: 20px;
-      background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for text readability */
+      background-color: rgba(0, 0, 0, 0.7);
       border-radius: 15px;
     }
 
@@ -114,11 +114,14 @@
       position: relative;
     }
 
-    table, th, td {
+    table,
+    th,
+    td {
       border: 1px solid green;
     }
 
-    th, td {
+    th,
+    td {
       padding: 12px;
     }
   </style>
@@ -127,11 +130,10 @@
 <body>
   <!-- Background Audio -->
   <audio autoplay loop>
-    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
   </audio>
 
-  <div class="overlay"></div> <!-- Overlay for the background image -->
+  <div class="overlay"></div>
 
   <header>
     <h1>Welcome to My Garage Ride Collection!</h1>
@@ -204,10 +206,10 @@
     }, 3000);
   </script>
 
-</body>
+  <footer>
+    <p>&copy; 2025 Mr Theo Arnold Gaopalelwe</p>
+  </footer>
 
-<footer>
-  <p>&copy; 2025 Mr Theo Arnold Gaopalelwe</p>
-</footer>
+</body>
 
 </html>

@@ -138,32 +138,24 @@
   <header>
     <h1>Welcome to My Garage Ride Collection!</h1>
   </header>
-<div class="carousel">
-  <img src="https://i.ytimg.com/vi/tjFr0l4hBdw/maxresdefault.jpg" alt="A perfect car" class="carousel-img">
-  <img src="https://th.bing.com/th/id/R.1fa9ec0b930fce2987bc334d1aa1e7ab?rik=BkTZINmWjY%2fkYA&pid=ImgRaw&r=" alt="Lamborghini Urus" class="carousel-img">
-  <img src="https://www.millermotorcars.com/imagetag/3162/3/l/Used-2019-Rolls-Royce-Cullinan.jpg" alt="Rolls-Royce Cullinan" class="carousel-img">
-</div>
 
-<script>
-  let currentIndex = 0;
-  const images = document.querySelectorAll('.carousel-img');
-  
-  // Hide all images initially except the first one
-  images.forEach((img, index) => {
-    if (index !== currentIndex) {
-      img.style.display = 'none';
-    }
-  });
+  <div class="carousel">
+    <img src="https://i.ytimg.com/vi/tjFr0l4hBdw/maxresdefault.jpg" alt="A perfect car" class="carousel-img">
+    <img src="https://th.bing.com/th/id/R.1fa9ec0b930fce2987bc334d1aa1e7ab?rik=BkTZINmWjY%2fkYA&pid=ImgRaw&r=" alt="Lamborghini Urus" class="carousel-img">
+    <img src="https://www.millermotorcars.com/imagetag/3162/3/l/Used-2019-Rolls-Royce-Cullinan.jpg" alt="Rolls-Royce Cullinan" class="carousel-img">
+  </div>
 
-  // Function to change the image every 3 seconds
-  setInterval(() => {
-    images[currentIndex].style.display = 'none';  // Hide current image
-    currentIndex = (currentIndex + 1) % images.length;  // Move to the next image
-    images[currentIndex].style.display = 'block';  // Show next image
-  }, 3000);
-</script>
-
-  
+  <script>
+    let currentIndex = 0;
+    const images = document.querySelectorAll('.carousel-img');
+    
+    // Function to change the image every 3 seconds
+    setInterval(() => {
+      images[currentIndex].style.display = 'none';  // Hide current image
+      currentIndex = (currentIndex + 1) % images.length;  // Move to the next image
+      images[currentIndex].style.display = 'block';  // Show next image
+    }, 3000);
+  </script>
 
   <main>
     <p>Some cars are built for speed, riding down the highways with ease, while others are designed for tough terrains, climbing steep hills without a struggle. There are even cars that run on electricity instead of petrol or diesel.</p>
@@ -171,8 +163,8 @@
     <p>My love for cars is big, ain't gonna lie!</p>
 
     <p>Here's a picture of my first car:</p>
-   
-<img src="https://i.pinimg.com/736x/bd/ce/f5/bdcef5844180693af29405def2c993c7.jpg"alt="best car ever">
+
+    <img src="https://i.pinimg.com/736x/bd/ce/f5/bdcef5844180693af29405def2c993c7.jpg" alt="best car ever">
     <p>My second car from my collection follows; the Lamborghini Urus:</p>
     <p>Manoeuvring around town with my Lamborghini feels like living the dream because I can ride it fast just to flex in the streets and feel the comfort it serves.</p>
 
@@ -216,17 +208,6 @@
       </form>
     </section>
   </main>
-
-  <script>
-    let currentIndex = 0;
-    const images = document.querySelectorAll('.carousel-img');
-
-    setInterval(() => {
-      images[currentIndex].style.display = 'none';
-      currentIndex = (currentIndex + 1) % images.length;
-      images[currentIndex].style.display = 'block';
-    }, 3000);
-  </script>
 
   <footer>
     <p>&copy; 2025 Mr Theo Arnold Gaopalelwe</p>

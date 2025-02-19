@@ -9,9 +9,9 @@
     /* Set the background image for the body */
     body {
       background-image: url(https://th.bing.com/th?&id=OVP.5ACW1I0twgTheS5OmycY0AHgFo&w=276&h=154&c=7&pid=2.1&rs=1);
-      background-position: full page;
+      background-position: center;
       background-size: cover;
-      background-repeat: repeat;
+      background-repeat: no-repeat;
       height: 100vh;
       margin: 0;
       font-family: Arial, montserrat;
@@ -86,8 +86,8 @@
       font-size: 1.2em;
       margin-bottom: 20px;
     }
-<head>
-  <style>
+
+    /* Carousel styles */
     .carousel {
       position: relative;
       width: 100%;
@@ -134,9 +134,6 @@
   </style>
 </head>
 
-  
-</head>
-
 <body>
   <!-- Background Audio -->
   <audio autoplay loop>
@@ -148,24 +145,13 @@
   <header>
     <h1>Welcome to My Garage Ride Collection!</h1>
   </header>
-<body> 
+
+  <!-- Carousel Section -->
   <div class="carousel">
     <img src="https://i.ytimg.com/vi/tjFr0l4hBdw/maxresdefault.jpg" alt="A perfect car" class="carousel-img">
     <img src="https://th.bing.com/th/id/R.1fa9ec0b930fce2987bc334d1aa1e7ab?rik=BkTZINmWjY%2fkYA&pid=ImgRaw&r=" alt="Lamborghini Urus" class="carousel-img">
     <img src="https://www.millermotorcars.com/imagetag/3162/3/l/Used-2019-Rolls-Royce-Cullinan.jpg" alt="Rolls-Royce Cullinan" class="carousel-img">
   </div>
-</body>
-  <script>
-    let currentIndex = 0;
-    const images = document.querySelectorAll('.carousel-img');
-    
-    // Function to change the image every 3 seconds
-    setInterval(() => {
-      images[currentIndex].style.display = 'none';  // Hide current image
-      currentIndex = (currentIndex + 1) % images.length;  // Move to the next image
-      images[currentIndex].style.display = 'block';  // Show next image
-    }, 3000);
-  </script>
 
   <main>
     <p>Some cars are built for speed, riding down the highways with ease, while others are designed for tough terrains, climbing steep hills without a struggle. There are even cars that run on electricity instead of petrol or diesel.</p>

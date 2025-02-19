@@ -1,17 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ARNOLD GARAGE</title>
-    <style>
-      /* Set the background image for the body */
-      <!DOCTYPE html>
-<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Modern Garage</title>
+    <title>ARNOLD GARAGE</title>
     <style>
         /* Basic styles */
         body {
@@ -20,13 +13,37 @@
             padding: 0;
             background-color: #1a1a1a;
             color: #fff;
+            background-image: url('https://th.bing.com/th?&id=OVP.5ACW1I0twgTheS5OmycY0AHgFo&w=276&h=154&c=7&pid=2.1&rs=1');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            position: relative;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* Overlay to ensure readability of text */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
         }
 
         /* Header Section */
         header {
             text-align: center;
             padding: 50px;
-            background-color: #333;
+            background-color: rgba(51, 51, 51, 0.7);
+            z-index: 2;
+            position: relative;
         }
 
         header h1 {
@@ -39,362 +56,216 @@
             margin-top: 10px;
         }
 
-        /* Slideshow Container */
-        .slideshow-container {
+        /* Slideshow Section */
+        .carousel {
             position: relative;
-            max-width: 100%;
+            width: 100%;
+            max-width: 600px;
             margin: auto;
             overflow: hidden;
-            padding-top: 20px;
+            border-radius: 10px;
         }
 
-        /* Hide the images initially */
-        .slides {
-            display: none;
-        }
-
-        /* Style for Images */
-        .slide-image {
-            width: 100%;
-            height: 400px;
-            object-fit: cover;
-        }
-
-        /* Caption Style */
-        .caption {
-            position: absolute;
-            bottom: 8px;
-            left: 16px;
-            color: white;
-            font-size: 24px;
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 10px;
-        }
-
-        /* CSS-only Slideshow - Using Radio Buttons */
-        .slideshow-container input[type="radio"] {
-            display: none;
-        }
-
-        .slide-container {
+        .carousel-images {
             display: flex;
-            transition: transform 1s ease;
+            transition: transform 1s ease-in-out;
         }
 
-        .slide-container label {
+        .carousel-img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* Hide navigation buttons when not needed */
+        .carousel-nav {
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            transform: translateY(-50%);
+            z-index: 2;
+        }
+
+        .prev,
+        .next {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            font-size: 2em;
+            padding: 10px;
             cursor: pointer;
+            border: none;
+            border-radius: 50%;
         }
 
-        .slide-container input:checked ~ .slides {
-            display: block;
+        /* Hide the navigation controls */
+        .carousel-nav {
+            display: none;
         }
 
-        /* Footer Section */
-        footer {
+        /* Main Content */
+        main {
+            z-index: 2;
+            position: relative;
             text-align: center;
-            padding: 30px 0;
-            background-color: #333;
+            margin: 50px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 15px;
         }
 
-        footer a {
-            color: #fff;
-            text-decoration: none;
-            padding: 10px 20px;
-            margin: 10px;
-            background-color: #555;
+        /* Car Specifications Table */
+        #specs table {
+            margin: 0 auto;
+            width: 80%;
+            border-collapse: collapse;
+            color: gold;
+        }
+
+        #specs th,
+        #specs td {
+            padding: 10px;
+            border: 1px solid gold;
+        }
+
+        /* Contact Form */
+        form input[type="text"],
+        form input[type="number"] {
+            padding: 8px;
+            font-size: 1em;
+            width: 60%;
+            margin: 5px 0;
             border-radius: 5px;
         }
 
-        footer a:hover {
-            background-color: #777;
+        form input[type="submit"] {
+            padding: 10px 20px;
+            background-color: gold;
+            border: none;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+
+        /* Footer */
+        footer {
+            z-index: 2;
+            position: relative;
+            text-align: center;
+            margin-top: 40px;
+            background-color: rgba(51, 51, 51, 0.7);
+            padding: 20px;
+        }
+
+        /* CSS for Carousel using Radio Buttons */
+        #carousel {
+            display: none;
+        }
+
+        #carousel:checked ~ .carousel-images {
+            transform: translateX(-100%);
+        }
+
+        #carousel2:checked ~ .carousel-images {
+            transform: translateX(-200%);
+        }
+
+        .carousel-images {
+            display: flex;
+            transition: transform 1s ease-in-out;
+        }
+
+        .carousel-images img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Create radio buttons for automatic sliding */
+        .carousel-radio {
+            display: none;
+        }
+
+        .carousel-radio + .carousel-radio {
+            display: none;
         }
     </style>
 </head>
+
 <body>
 
-<!-- Header Section -->
-<header>
-    <h1>The Modern Garage</h1>
-    <p>Where Luxury Meets Performance</p>
-</header>
-
-<!-- Slideshow Section (CSS-only with radio buttons) -->
-<div class="slideshow-container">
-    <!-- Radio Buttons to control the slides -->
-    <input type="radio" id="slide1" name="slide" checked>
-    <input type="radio" id="slide2" name="slide">
-    <input type="radio" id="slide3" name="slide">
-
-    <!-- Slide Container (to hold the images) -->
-    <div class="slide-container">
-        <div class="slides">
-            <img src="https://i.pinimg.com/736x/bd/ce/f5/bdcef5844180693af29405def2c993c7.jpg" alt="best car ever">
-            <div class="caption"> owning terrains: Where innovation meets muscle</div>
-        </div>
-
-        <div class="slides">
-            <img src="ford-velociraptor.jpg" class="slide-image" alt="Ford VelociRaptor">
-            <div class="caption">Ford VelociRaptor: Uncompromising power and rugged luxury</div>
-        </div>
-
-        <div class="slides">
-             <img src="https://th.bing.com/th/id/OIP.wqCEsugWLKvvQOf1q-YdYQHaEo?rs=1&pid=ImgDetMain.jpg" alt="Mercedes-Benz G 63 AMG 6x6">
-            <div class="caption">type of car that picked my interest: Ultimate elegance on wheels</div>
-        </div>
-    </div>
-
-    <!-- Labels for the radio buttons to create clickable slides -->
-    <label for="slide1"></label>
-    <label for="slide2"></label>
-    <label for="slide3"></label>
-</div>
-
-<!-- Footer Section -->
-<footer>
-    <p>Contact us for more information.</p>
-    <a href="#">Learn More About My Collection</a>
-</footer>
-
-</body>
-</html>
-
-      body {
-        background-image: url(https://th.bing.com/th?&id=OVP.5ACW1I0twgTheS5OmycY0AHgFo&w=276&h=154&c=7&pid=2.1&rs=1);
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        height: 100vh;
-        margin: 0;
-        font-family: Arial, montserrat;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        color: gold;
-        position: relative;
-        overflow-x: hidden;
-        scroll-behavior: smooth;
-      }
-      /* Overlay to ensure readability of text */
-      .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-        z-index: 1;
-      }
-      /* Main header style */
-      h1 {
-        font-size: 3em;
-        text-align: center;
-        margin-top: 50px;
-        animation: fadeIn 2s ease-in-out;
-        z-index: 2;
-        position: relative;
-      }
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
-      }
-      /* Main content area */
-      main {
-        z-index: 2;
-        position: relative;
-        text-align: center;
-        margin: 50px;
-        padding: 20px;
-        background-color: rgba(0, 0, 0, 0.7);
-        border-radius: 15px;
-      }
-      /* Image style */
-      img {
-        max-width: 400px;
-        width: 75%;
-        height: auto;
-        margin: 15px;
-        border-radius: 10px;
-      }
-      footer {
-        z-index: 2;
-        position: relative;
-        text-align: center;
-        margin-top: 40px;
-      }
-      p {
-        font-size: 1.2em;
-        margin-bottom: 20px;
-      }
-      /* Carousel styles */
-      .carousel {
-        position: relative;
-        width: 100%;
-        max-width: 600px; /* Adjust width as needed */
-        margin: auto;
-        overflow: hidden;
-        border-radius: 10px;
-      }
-      .carousel-images {
-        display: flex;
-        transition: transform 1s ease-in-out;
-      }
-      .carousel-img {
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
-      }
-      /* Navigation buttons */
-      .carousel-nav {
-        position: absolute;
-        top: 50%;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        transform: translateY(-50%);
-        z-index: 2;
-      }
-      .prev, .next {
-        background-color: rgba(0, 0, 0, 0.5);
-        color: white;
-        font-size: 2em;
-        padding: 10px;
-        cursor: pointer;
-        border: none;
-        border-radius: 50%;
-      }
-      /* Car specifications table styles */
-      #specs table {
-        margin: 0 auto;
-        width: 80%;
-        border-collapse: collapse;
-      }
-      #specs th, #specs td {
-        padding: 10px;
-        border: 1px solid gold;
-      }
-      /* Contact form styles */
-      form input[type="text"],
-      form input[type="number"] {
-        padding: 8px;
-        font-size: 1em;
-        width: 60%;
-        margin: 5px 0;
-        border-radius: 5px;
-      }
-      form input[type="submit"] {
-        padding: 10px 20px;
-        background-color: gold;
-        border: none;
-        font-size: 1.2em;
-        cursor: pointer;
-      }
-    </style>
-  </head>
-  <body>
     <!-- Background Audio -->
     <audio autoplay loop>
-      <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
     </audio>
 
     <div class="overlay"></div>
+
+    <!-- Header Section -->
     <header>
-      <h1>Welcome to My Garage Ride Collection!</h1>
+        <h1>Welcome to My Garage Ride Collection!</h1>
+        <p>Where Luxury Meets Performance</p>
     </header>
 
     <!-- Car Slideshow Section -->
     <div class="carousel">
-      <div class="carousel-images">
-        <img src="https://i.ytimg.com/vi/tjFr0l4hBdw/maxresdefault.jpg" alt="A perfect car" class="carousel-img">
-        <img src="https://th.bing.com/th/id/R.1fa9ec0b930fce2987bc334d1aa1e7ab?rik=BkTZINmWjY%2fkYA&pid=ImgRaw&r=" alt="Lamborghini Urus" class="carousel-img">
-        <img src="https://www.millermotorcars.com/imagetag/3162/3/l/Used-2019-Rolls-Royce-Cullinan.jpg" alt="Rolls-Royce Cullinan" class="carousel-img">
-      </div>
-      <!-- Navigation buttons -->
-      <div class="carousel-nav">
-        <button class="prev">&#10094;</button>
-        <button class="next">&#10095;</button>
-      </div>
+        <input type="radio" name="carousel" id="carousel" class="carousel-radio">
+        <input type="radio" name="carousel" id="carousel2" class="carousel-radio">
+        <div class="carousel-images">
+            <img src="https://i.ytimg.com/vi/tjFr0l4hBdw/maxresdefault.jpg" alt="A perfect car" class="carousel-img">
+            <img src="https://th.bing.com/th/id/R.1fa9ec0b930fce2987bc334d1aa1e7ab?rik=BkTZINmWjY%2fkYA&pid=ImgRaw&r=" alt="Lamborghini Urus" class="carousel-img">
+            <img src="https://www.millermotorcars.com/imagetag/3162/3/l/Used-2019-Rolls-Royce-Cullinan.jpg" alt="Rolls-Royce Cullinan" class="carousel-img">
+        </div>
     </div>
 
     <main>
-      <p>Some cars are built for speed, riding down the highways with ease, while others are designed for tough terrains, climbing steep hills without a struggle. There are even cars that run on electricity instead of petrol or diesel.</p>
-      <p>My love for cars is big, ain't gonna lie!</p>
-      <p>Here's a picture of my first car:</p>
-      <img src="https://i.pinimg.com/736x/bd/ce/f5/bdcef5844180693af29405def2c993c7.jpg" alt="best car ever">
-      <p>My second car from my collection follows; the Lamborghini Urus:</p>
-      <p>Manoeuvring around town with my Lamborghini feels like living the dream because I can ride it fast just to flex in the streets and feel the comfort it serves.</p>
-      <p>My gold baby is the heart of my collection.</p>
-      <img src="https://i.pinimg.com/originals/61/93/72/619372c7f0208ca87fdff84338dd37c1.jpg" alt="best car ever">
-      <p>I’m also aiming to buy a Rolls-Royce Cullinan. It’s so cool and classic!</p>
-      <img src="https://www.millermotorcars.com/imagetag/3162/3/l/Used-2019-Rolls-Royce-Cullinan.jpg" alt="Rolls-Royce Cullinan">
-      <p>There’s the truck 2013 Mercedes-Benz G 63 AMG 6x6, the king himself.</p>
-      <p>Like this truck, riding with the boys in the woods feels like heaven, the joy and the maneuvering in the terrains is so much fun!</p>
-      <img src="https://th.bing.com/th/id/OIP.wqCEsugWLKvvQOf1q-YdYQHaEo?rs=1&pid=ImgDetMain.jpg" alt="Mercedes-Benz G 63 AMG 6x6">
-      <section id="specs">
-        <h2>Car Specifications</h2>
-        <table>
-          <tr>
-            <th>Car Model</th>
-            <th>Engine</th>
-            <th>Horsepower</th>
-          </tr>
-          <tr>
-            <td>Lamborghini Urus</td>
-            <td>V8 Twin-Turbo</td>
-            <td>650 HP</td>
-          </tr>
-          <tr>
-            <td>Rolls-Royce Cullinan</td>
-            <td>V12 Twin-Turbo</td>
-            <td>563 HP</td>
-          </tr>
-        </table>
-      </section>
+        <p>Some cars are built for speed, others for tough terrains. My collection celebrates all kinds of luxury, performance, and innovation.</p>
+        <p>Here's a picture of my first car:</p>
+        <img src="https://i.pinimg.com/736x/bd/ce/f5/bdcef5844180693af29405def2c993c7.jpg" alt="best car ever">
+        <p>Manoeuvring around town with my Lamborghini Urus is a dream come true:</p>
+        <img src="https://i.pinimg.com/originals/61/93/72/619372c7f0208ca87fdff84338dd37c1.jpg" alt="Lamborghini Urus">
+        <p>I also aim to add a Rolls-Royce Cullinan to my collection:</p>
+        <img src="https://www.millermotorcars.com/imagetag/3162/3/l/Used-2019-Rolls-Royce-Cullinan.jpg" alt="Rolls-Royce Cullinan">
+        <p>And for off-roading, the Mercedes-Benz G 63 AMG 6x6 is unbeatable:</p>
+        <img src="https://th.bing.com/th/id/OIP.wqCEsugWLKvvQOf1q-YdYQHaEo?rs=1&pid=ImgDetMain.jpg" alt="Mercedes-Benz G 63 AMG 6x6">
 
-      <section id="contact">
-        <h2>Contact Me</h2>
-        <form action="submit_form.php" method="post">
-          <label for="name">My Name:</label><br>
-          <input type="text" id="name" name="name" required><br><br>
-          <label for="phone">My Number:</label><br>
-          <input type="number" id="phone" name="phone" required><br><br>
-          <input type="submit" value="Submit">
-        </form>
-      </section>
+        <section id="specs">
+            <h2>Car Specifications</h2>
+            <table>
+                <tr>
+                    <th>Car Model</th>
+                    <th>Engine</th>
+                    <th>Horsepower</th>
+                </tr>
+                <tr>
+                    <td>Lamborghini Urus</td>
+                    <td>V8 Twin-Turbo</td>
+                    <td>650 HP</td>
+                </tr>
+                <tr>
+                    <td>Rolls-Royce Cullinan</td>
+                    <td>V12 Twin-Turbo</td>
+                    <td>563 HP</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form action="submit_form.php" method="post">
+                <label for="name">Your Name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+                <label for="phone">Your Number:</label><br>
+                <input type="number" id="phone" name="phone" required><br><br>
+                <input type="submit" value="Submit">
+            </form>
+        </section>
     </main>
 
+    <!-- Footer Section -->
     <footer>
-      <p>&copy; 2025 Mr Theo Arnold Gaopalelwe</p>
+        <p>&copy; 2025 Mr Theo Arnold Gaopalelwe</p>
     </footer>
 
-    <script>
-      // Slideshow logic
-      let index = 0;
-      const slides = document.querySelectorAll('.carousel-img');
-      const totalSlides = slides.length;
+</body>
 
-      function moveSlide() {
-        const carousel = document.querySelector('.carousel-images');
-        index = (index + 1) % totalSlides; // Loop back to the first image
-        carousel.style.transform = `translateX(-${index * 100}%)`;
-      }
-
-      // Change slides every 3 seconds
-      setInterval(moveSlide, 3000);
-
-      // Navigate manually
-      document.querySelector('.next').addEventListener('click', () => {
-        index = (index + 1) % totalSlides;
-        moveSlide();
-      });
-      
-      document.querySelector('.prev').addEventListener('click', () => {
-        index = (index - 1 + totalSlides) % totalSlides;
-        moveSlide();
-      });
-    </script>
-  </body>
 </html>

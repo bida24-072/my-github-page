@@ -226,7 +226,7 @@
 
       function moveSlide() {
         const carousel = document.querySelector('.carousel-images');
-        index = (index + 1) % totalSlides;
+        index = (index + 1) % totalSlides; // Loop back to the first image
         carousel.style.transform = `translateX(-${index * 100}%)`;
       }
 

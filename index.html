@@ -1,216 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ARNOLD GARAGE</title>
-  <style>
-    /* Set the background image for the body */
-    body {
-      background-image: url(https://th.bing.com/th?&id=OVP.5ACW1I0twgTheS5OmycY0AHgFo&w=276&h=154&c=7&pid=2.1&rs=1);
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
-      height: 100vh;
-      margin: 0;
-      font-family: Arial, montserrat;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      color: gold;
-      position: relative;
-      overflow-x: hidden;
-      scroll-behavior: smooth;
-    }
-
-    /* Overlay to ensure readability of text */
-    .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.5);
-      z-index: 1;
-    }
-
-    /* Main header style */
-    h1 {
-      font-size: 3em;
-      text-align: center;
-      margin-top: 50px;
-      animation: fadeIn 2s ease-in-out;
-      z-index: 2;
-      position: relative;
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARNOLD GARAGE</title>
+    <style>
+      /* Set the background image for the body */
+      body {
+        background-image: url(https://th.bing.com/th?&id=OVP.5ACW1I0twgTheS5OmycY0AHgFo&w=276&h=154&c=7&pid=2.1&rs=1);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100vh;
+        margin: 0;
+        font-family: Arial, montserrat;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        color: gold;
+        position: relative;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
       }
-
-      to {
-        opacity: 1;
-      }
-    }
-
-    /* Main content area */
-    main {
-      z-index: 2;
-      position: relative;
-      text-align: center;
-      margin: 50px;
-      padding: 20px;
-      background-color: rgba(0, 0, 0, 0.7);
-      border-radius: 15px;
-    }
-
-    /* Image style */
-    img {
-      max-width: 400px;
-      width: 75%;
-      height: auto;
-      margin: 15px;
-      border-radius: 10px;
-    }
-
-    footer {
-      z-index: 2;
-      position: relative;
-      text-align: center;
-      margin-top: 40px;
-    }
-
-    p {
-      font-size: 1.2em;
-      margin-bottom: 20px;
-    }
-
-    /* Carousel styles */
-    .carousel {
-      position: relative;
-      width: 100%;
-      max-width: 600px; /* Adjust width as needed */
-      margin: auto;
-      overflow: hidden;
-    }
-
-    .carousel-img {
-      width: 100%;
-      height: auto;
-      position: absolute;
-      top: 0;
-      left: 100%;
-      animation: slide 9s infinite;
-    }
-
-    .carousel-img:nth-child(1) {
-      animation-delay: 0s;
-    }
-
-    .carousel-img:nth-child(2) {
-      animation-delay: 3s;
-    }
-
-    .carousel-img:nth-child(3) {
-      animation-delay: 6s;
-    }
-
-    @keyframes slide {
-      0% {
-        left: 100%;
-      }
-      33% {
+      /* Overlay to ensure readability of text */
+      .overlay {
+        position: absolute;
+        top: 0;
         left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1;
       }
-      66% {
-        left: -100%;
+      /* Main header style */
+      h1 {
+        font-size: 3em;
+        text-align: center;
+        margin-top: 50px;
+        animation: fadeIn 2s ease-in-out;
+        z-index: 2;
+        position: relative;
       }
-      100% {
-        left: -100%;
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
       }
-    }
-  </style>
-</head>
+      /* Main content area */
+      main {
+        z-index: 2;
+        position: relative;
+        text-align: center;
+        margin: 50px;
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.7);
+        border-radius: 15px;
+      }
+      /* Image style */
+      img {
+        max-width: 400px;
+        width: 75%;
+        height: auto;
+        margin: 15px;
+        border-radius: 10px;
+      }
+      footer {
+        z-index: 2;
+        position: relative;
+        text-align: center;
+        margin-top: 40px;
+      }
+      p {
+        font-size: 1.2em;
+        margin-bottom: 20px;
+      }
+      /* Carousel styles */
+      .carousel {
+        position: relative;
+        width: 100%;
+        max-width: 600px; /* Adjust width as needed */
+        margin: auto;
+        overflow: hidden;
+      }
+      .carousel-images {
+        display: flex;
+        transition: transform 1s ease-in-out;
+      }
+      .carousel-img {
+        width: 100%;
+        height: auto;
+      }
+      /* Car specifications table styles */
+      #specs table {
+        margin: 0 auto;
+        width: 80%;
+        border-collapse: collapse;
+      }
+      #specs th, #specs td {
+        padding: 10px;
+        border: 1px solid gold;
+      }
+      /* Contact form styles */
+      form input[type="text"],
+      form input[type="number"] {
+        padding: 8px;
+        font-size: 1em;
+        width: 60%;
+        margin: 5px 0;
+        border-radius: 5px;
+      }
+      form input[type="submit"] {
+        padding: 10px 20px;
+        background-color: gold;
+        border: none;
+        font-size: 1.2em;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Background Audio -->
+    <audio autoplay loop>
+      <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+    </audio>
 
-<body>
-  <!-- Background Audio -->
-  <audio autoplay loop>
-    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
-  </audio>
+    <div class="overlay"></div>
+    <header>
+      <h1>Welcome to My Garage Ride Collection!</h1>
+    </header>
 
-  <div class="overlay"></div>
+    <!-- Carousel Section -->
+    <div class="carousel">
+      <div class="carousel-images">
+        <img src="https://i.ytimg.com/vi/tjFr0l4hBdw/maxresdefault.jpg" alt="A perfect car" class="carousel-img">
+        <img src="https://th.bing.com/th/id/R.1fa9ec0b930fce2987bc334d1aa1e7ab?rik=BkTZINmWjY%2fkYA&pid=ImgRaw&r=" alt="Lamborghini Urus" class="carousel-img">
+        <img src="https://www.millermotorcars.com/imagetag/3162/3/l/Used-2019-Rolls-Royce-Cullinan.jpg" alt="Rolls-Royce Cullinan" class="carousel-img">
+      </div>
+    </div>
 
-  <header>
-    <h1>Welcome to My Garage Ride Collection!</h1>
-  </header>
+    <main>
+      <p>Some cars are built for speed, riding down the highways with ease, while others are designed for tough terrains, climbing steep hills without a struggle. There are even cars that run on electricity instead of petrol or diesel.</p>
+      <p>My love for cars is big, ain't gonna lie!</p>
+      <p>Here's a picture of my first car:</p>
+      <img src="https://i.pinimg.com/736x/bd/ce/f5/bdcef5844180693af29405def2c993c7.jpg" alt="best car ever">
+      <p>My second car from my collection follows; the Lamborghini Urus:</p>
+      <p>Manoeuvring around town with my Lamborghini feels like living the dream because I can ride it fast just to flex in the streets and feel the comfort it serves.</p>
+      <p>My gold baby is the heart of my collection.</p>
+      <img src="https://i.pinimg.com/originals/61/93/72/619372c7f0208ca87fdff84338dd37c1.jpg" alt="best car ever">
+      <p>I’m also aiming to buy a Rolls-Royce Cullinan. It’s so cool and classic!</p>
+      <img src="https://www.millermotorcars.com/imagetag/3162/3/l/Used-2019-Rolls-Royce-Cullinan.jpg" alt="Rolls-Royce Cullinan">
+      <p>There’s the truck 2013 Mercedes-Benz G 63 AMG 6x6, the king himself.</p>
+      <p>Like this truck, riding with the boys in the woods feels like heaven, the joy and the maneuvering in the terrains is so much fun!</p>
+      <img src="https://th.bing.com/th/id/OIP.wqCEsugWLKvvQOf1q-YdYQHaEo?rs=1&pid=ImgDetMain.jpg" alt="Mercedes-Benz G 63 AMG 6x6">
+      <section id="specs">
+        <h2>Car Specifications</h2>
+        <table>
+          <tr>
+            <th>Car Model</th>
+            <th>Engine</th>
+            <th>Horsepower</th>
+          </tr>
+          <tr>
+            <td>Lamborghini Urus</td>
+            <td>V8 Twin-Turbo</td>
+            <td>650 HP</td>
+          </tr>
+          <tr>
+            <td>Rolls-Royce Cullinan</td>
+            <td>V12 Twin-Turbo</td>
+            <td>563 HP</td>
+          </tr>
+        </table>
+      </section>
 
-  <!-- Carousel Section -->
-  <div class="carousel">
-    <img src="https://i.ytimg.com/vi/tjFr0l4hBdw/maxresdefault.jpg" alt="A perfect car" class="carousel-img">
-    <img src="https://th.bing.com/th/id/R.1fa9ec0b930fce2987bc334d1aa1e7ab?rik=BkTZINmWjY%2fkYA&pid=ImgRaw&r=" alt="Lamborghini Urus" class="carousel-img">
-    <img src="https://www.millermotorcars.com/imagetag/3162/3/l/Used-2019-Rolls-Royce-Cullinan.jpg" alt="Rolls-Royce Cullinan" class="carousel-img">
-  </div>
+      <section id="contact">
+        <h2>Contact Me</h2>
+        <form action="submit_form.php" method="post">
+          <label for="name">My Name:</label><br>
+          <input type="text" id="name" name="name" required><br><br>
+          <label for="phone">My Number:</label><br>
+          <input type="number" id="phone" name="phone" required><br><br>
+          <input type="submit" value="Submit">
+        </form>
+      </section>
+    </main>
 
-  <main>
-    <p>Some cars are built for speed, riding down the highways with ease, while others are designed for tough terrains, climbing steep hills without a struggle. There are even cars that run on electricity instead of petrol or diesel.</p>
+    <footer>
+      <p>&copy; 2025 Mr Theo Arnold Gaopalelwe</p>
+    </footer>
 
-    <p>My love for cars is big, ain't gonna lie!</p>
+    <script>
+      let index = 0;
+      const slides = document.querySelectorAll('.carousel-img');
+      const totalSlides = slides.length;
 
-    <p>Here's a picture of my first car:</p>
+      function moveSlide() {
+        const carousel = document.querySelector('.carousel-images');
+        index = (index + 1) % totalSlides;
+        carousel.style.transform = `translateX(-${index * 100}%)`;
+      }
 
-    <img src="https://i.pinimg.com/736x/bd/ce/f5/bdcef5844180693af29405def2c993c7.jpg" alt="best car ever">
-    <p>My second car from my collection follows; the Lamborghini Urus:</p>
-    <p>Manoeuvring around town with my Lamborghini feels like living the dream because I can ride it fast just to flex in the streets and feel the comfort it serves.</p>
-
-    <p>My gold baby is the heart of my collection.</p>
-
-    <img src="https://i.pinimg.com/originals/61/93/72/619372c7f0208ca87fdff84338dd37c1.jpg" alt="best car ever">
-
-    <p>I’m also aiming to buy a Rolls-Royce Cullinan. It’s so cool and classic!</p>
-
-    <img src="https://www.millermotorcars.com/imagetag/3162/3/l/Used-2019-Rolls-Royce-Cullinan.jpg" alt="Rolls-Royce Cullinan">
-    <p>Theres the truck 2013 Mercedes-Benz G 63 AMG 6x6 the king himself.</p>
-<p>Like this truck,riding with the boys in the woods be like in heaven,the joy and the manouvering in the terrains be fun</p>
-    <img src=="https://th.bing.com/th/id/OIP.wqCEsugWLKvvQOf1q-YdYQHaEo?rs=1&pid=ImgDetMain.jpg" alt="">
-    <section id="specs">
-      <h2>Car Specifications</h2>
-      <table>
-        <tr>
-          <th>Car Model</th>
-          <th>Engine</th>
-          <th>Horsepower</th>
-        </tr>
-        <tr>
-          <td>Lamborghini Urus</td>
-          <td>V8 Twin-Turbo</td>
-          <td>650 HP</td>
-        </tr>
-        <tr>
-          <td>Rolls-Royce Cullinan</td>
-          <td>V12 Twin-Turbo</td>
-          <td>563 HP</td>
-        </tr>
-      </table>
-    </section>
-
-    <section id="contact">
-      <h2>Contact Me</h2>
-      <form action="submit_form.php" method="post">
-        <label for="name">My Name:</label><br>
-        <input type=Mr Theo Arnold Gaopalelwe
-        <label for="my phone number>My Number:</label><br>
-        <input type="number" id="72706831" number="72706831" required><br><br>
-        <input type="call" value="call">
-      </form>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Mr Theo Arnold Gaopalelwe</p>
-  </footer>
-
-</body>
-
+      setInterval(moveSlide, 3000); // Change slides every 3 seconds
+    </script>
+  </body>
 </html>

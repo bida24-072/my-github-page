@@ -86,45 +86,55 @@
       font-size: 1.2em;
       margin-bottom: 20px;
     }
-
-    /* Carousel Styles */
+<head>
+  <style>
     .carousel {
       position: relative;
-      width: 80%;
+      width: 100%;
+      max-width: 600px; /* Adjust width as needed */
       margin: auto;
       overflow: hidden;
     }
 
     .carousel-img {
       width: 100%;
-      display: none;
+      height: auto;
+      position: absolute;
+      top: 0;
+      left: 100%;
+      animation: slide 9s infinite;
     }
 
-    .carousel-img:first-child {
-      display: block;
+    .carousel-img:nth-child(1) {
+      animation-delay: 0s;
     }
 
-    /* Table Styles */
-    table {
-      width: 80%;
-      margin: 30px auto;
-      border-collapse: collapse;
-      text-align: center;
-      z-index: 2;
-      position: relative;
+    .carousel-img:nth-child(2) {
+      animation-delay: 3s;
     }
 
-    table,
-    th,
-    td {
-      border: 1px solid green;
+    .carousel-img:nth-child(3) {
+      animation-delay: 6s;
     }
 
-    th,
-    td {
-      padding: 12px;
+    @keyframes slide {
+      0% {
+        left: 100%;
+      }
+      33% {
+        left: 0;
+      }
+      66% {
+        left: -100%;
+      }
+      100% {
+        left: -100%;
+      }
     }
   </style>
+</head>
+
+  
 </head>
 
 <body>
@@ -138,13 +148,13 @@
   <header>
     <h1>Welcome to My Garage Ride Collection!</h1>
   </header>
-
+<body> 
   <div class="carousel">
     <img src="https://i.ytimg.com/vi/tjFr0l4hBdw/maxresdefault.jpg" alt="A perfect car" class="carousel-img">
     <img src="https://th.bing.com/th/id/R.1fa9ec0b930fce2987bc334d1aa1e7ab?rik=BkTZINmWjY%2fkYA&pid=ImgRaw&r=" alt="Lamborghini Urus" class="carousel-img">
     <img src="https://www.millermotorcars.com/imagetag/3162/3/l/Used-2019-Rolls-Royce-Cullinan.jpg" alt="Rolls-Royce Cullinan" class="carousel-img">
   </div>
-
+</body>
   <script>
     let currentIndex = 0;
     const images = document.querySelectorAll('.carousel-img');

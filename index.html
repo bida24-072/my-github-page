@@ -69,6 +69,7 @@
         .carousel-images {
             display: flex;
             transition: transform 1s ease-in-out;
+            width: 300%; /* We have 3 images, adjust accordingly */
         }
 
         .carousel-img {
@@ -77,31 +78,25 @@
             border-radius: 10px;
         }
 
-        /* Hide navigation buttons when not needed */
-        .carousel-nav {
-            display: flex;
-            justify-content: space-between;
-            position: absolute;
-            top: 50%;
-            width: 100%;
-            transform: translateY(-50%);
-            z-index: 2;
+        /* Keyframes for automatic sliding */
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+            33.33% {
+                transform: translateX(-100%);
+            }
+            66.66% {
+                transform: translateX(-200%);
+            }
+            100% {
+                transform: translateX(0);
+            }
         }
 
-        .prev,
-        .next {
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            font-size: 2em;
-            padding: 10px;
-            cursor: pointer;
-            border: none;
-            border-radius: 50%;
-        }
-
-        /* Hide the navigation controls */
-        .carousel-nav {
-            display: none;
+        /* Apply the animation to carousel */
+        .carousel-images {
+            animation: slide 9s infinite; /* 9 seconds for one full cycle */
         }
 
         /* Main Content */
@@ -115,38 +110,6 @@
             border-radius: 15px;
         }
 
-        /* Car Specifications Table */
-        #specs table {
-            margin: 0 auto;
-            width: 80%;
-            border-collapse: collapse;
-            color: gold;
-        }
-
-        #specs th,
-        #specs td {
-            padding: 10px;
-            border: 1px solid gold;
-        }
-
-        /* Contact Form */
-        form input[type="text"],
-        form input[type="number"] {
-            padding: 8px;
-            font-size: 1em;
-            width: 60%;
-            margin: 5px 0;
-            border-radius: 5px;
-        }
-
-        form input[type="submit"] {
-            padding: 10px 20px;
-            background-color: gold;
-            border: none;
-            font-size: 1.2em;
-            cursor: pointer;
-        }
-
         /* Footer */
         footer {
             z-index: 2;
@@ -155,52 +118,6 @@
             margin-top: 40px;
             background-color: rgba(51, 51, 51, 0.7);
             padding: 20px;
-        }
-
-        /* CSS for Carousel using Radio Buttons */
-        #carousel {
-            display: none;
-        }
-
-        #carousel:checked ~ .carousel-images {
-            transform: translateX(-100%);
-        }
-
-        #carousel2:checked ~ .carousel-images {
-            transform: translateX(-200%);
-        }
-
-        .carousel-images {
-            display: flex;
-            transition: transform 1s ease-in-out;
-        }
-
-        .carousel-images img {
-            width: 100%;
-            height: auto;
-        }
-
-        /* Create radio buttons for automatic sliding */
-        .carousel-radio {
-            display: none;
-        }
-
-        .carousel-radio + .carousel-radio {
-            display: none;
-        }
-
-        /* Scroll-to-top button */
-        .scroll-to-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: gold;
-            color: black;
-            font-size: 1.2em;
-            padding: 10px 20px;
-            cursor: pointer;
-            border: none;
-            border-radius: 5px;
         }
     </style>
 </head>
@@ -222,14 +139,21 @@
 
     <!-- Car Slideshow Section -->
     <div class="carousel">
-        <input type="radio" name="carousel" id="carousel" class="carousel-radio">
-        <input type="radio" name="carousel" id="carousel2" class="carousel-radio">
         <div class="carousel-images">
             <img src="https://i.ytimg.com/vi/tjFr0l4hBdw/maxresdefault.jpg" alt="A perfect car" class="carousel-img">
             <img src="https://th.bing.com/th/id/R.1fa9ec0b930fce2987bc334d1aa1e7ab?rik=BkTZINmWjY%2fkYA&pid=ImgRaw&r=" alt="Lamborghini Urus" class="carousel-img">
             <img src="https://www.millermotorcars.com/imagetag/3162/3/l/Used-2019-Rolls-Royce-Cullinan.jpg" alt="Rolls-Royce Cullinan" class="carousel-img">
         </div>
-    </div>
+   
+
+    <!-- Main Content -->
+    <main>
+        <p>Some cars are built for speed, others for tough terrains. My collection celebrates all kinds of luxury, performance, and innovation.</p>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        
 
     <!-- Scroll to content link -->
     <div style="text-align: center;">

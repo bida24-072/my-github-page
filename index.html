@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ARNOLD GARAGE</title>
+    <title>Arnold's Garage</title>
     <style>
         /* Basic styles */
         body {
@@ -17,7 +17,7 @@
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
-            height: 100vh;
+            height: 100%;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
@@ -188,6 +188,20 @@
         .carousel-radio + .carousel-radio {
             display: none;
         }
+
+        /* Scroll-to-top button */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: gold;
+            color: black;
+            font-size: 1.2em;
+            padding: 10px 20px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
     </style>
 </head>
 
@@ -202,7 +216,7 @@
 
     <!-- Header Section -->
     <header>
-        <h1>Welcome to My Garage Ride Collection!</h1>
+        <h1>Arnold's Garage</h1>
         <p>Where Luxury Meets Performance</p>
     </header>
 
@@ -217,7 +231,12 @@
         </div>
     </div>
 
-    <main>
+    <!-- Scroll to content link -->
+    <div style="text-align: center;">
+        <a href="#secondPageContent" style="color: gold; font-size: 1.5em; text-decoration: none; padding: 10px;">Scroll down to see more</a>
+    </div>
+
+    <main id="secondPageContent">
         <p>Some cars are built for speed, others for tough terrains. My collection celebrates all kinds of luxury, performance, and innovation.</p>
         <p>Here's a picture of my first car:</p>
         <img src="https://i.pinimg.com/736x/bd/ce/f5/bdcef5844180693af29405def2c993c7.jpg" alt="best car ever">
@@ -265,6 +284,9 @@
     <footer>
         <p>&copy; 2025 Mr Theo Arnold Gaopalelwe</p>
     </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" onclick="window.scrollTo(0, 0);">Back to Top</button>
 
 </body>
 

@@ -12,7 +12,7 @@
             margin: 0;
             padding: 0;
             background-color: #fff;
-            background-image: url(''); /https://th.bing.com/th/id/R.f663c42f933309dc0c0cf17f242735bd?rik=cLaCYusGYBdfkQ&pid=ImgRaw&r=0* Add your background image URL here */
+            background-image: url(''); /* Add your background image URL here */
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
@@ -82,12 +82,15 @@
             0% {
                 transform: translateX(0);
             }
+
             33.33% {
                 transform: translateX(-100%);
             }
+
             66.66% {
                 transform: translateX(-200%);
             }
+
             100% {
                 transform: translateX(-300%);
             }
@@ -117,6 +120,35 @@
             margin-top: 20px;
             background-color: rgba(51, 51, 51, 0.7);
             padding: 10px;
+        }
+
+        /* Scroll to Bottom Button */
+        .scroll-to-bottom {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: gold;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        /* Scroll to Top Button */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: gold;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 5px;
         }
     </style>
 </head>
@@ -151,115 +183,8 @@
         <p>&copy; 2025 Mr Theo Arnold Gaopalelwe</p>
     </footer>
 
-</body>
-
-</html>
-
-    </style>
-</head>
-
-<body>
-
-    <!-- Background Audio -->
-    <audio autoplay loop>
-        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
-    </audio>
-
-    <div class="overlay"></div>
-
-    <!-- Header Section -->
-    <header>
-        <h1>Arnold's Garage</h1>
-        <p>Where Luxury Meets Performance</p>
-    </header>
-
-    <!-- Car Slideshow Section -->
-    <div class="carousel">
-        <div class="carousel-images">
-            <img src="https://i.ytimg.com/vi/tjFr0l4hBdw/maxresdefault.jpg" alt="A perfect car" class="carousel-img">
-            <img src="https://i.pinimg.com/originals/bf/51/8e/bf518e5062acfbe7151ff43c8ee1e997.jpg"  alt="camaro my baby" class="carousel-img">
-            <img src="https://th.bing.com/th/id/R.1fa9ec0b930fce2987bc334d1aa1e7ab?rik=BkTZINmWjY%2fkYA&pid=ImgRaw&r=" alt="Lamborghini Urus" class="carousel-img">
-            <img src="https://www.millermotorcars.com/imagetag/3162/3/l/Used-2019-Rolls-Royce-Cullinan.jpg" alt="Rolls-Royce Cullinan" class="carousel-img">
-        </div>
-   
-
-    <!-- Main Content -->
-    <main>
-        <p>Some cars are built for speed, others for tough terrains. My collection celebrates all kinds of luxury, performance, and innovation.</p>
-    </main>
-
-    <!-- Footer Section -->
-    <footer>
-        
-
-    <!-- Scroll to content link -->
-    <div style="text-align: center;">
-        <a href="#secondPageContent" style="color: gold; font-size: 1.5em; text-decoration: none; padding: 10px;">interested in my cars lets scroll
-</a>
-    </div>
-
-    <main id="secondPageContent">
-        <p>Some cars are built for speed, others for tough terrains. My collection celebrates all kinds of luxury, performance, and innovation.</p>
-        <p>Here's a picture of my first car:</p>
-        <img src="https://i.pinimg.com/736x/bd/ce/f5/bdcef5844180693af29405def2c993c7.jpg" alt="best car ever">
-        
-        <p>Manoeuvring around town with my is a dream come true:</p>
-        <img src="https://www.carscoops.com/wp-content/uploads/2017/12/lambo-urus-performante-render-2.jpg" alt="Lamborghini Urus">
-
-        <p> Some folks of mine suggested i buy this speedy ride and from their suggestion i added color blue while they wanted gold</p>
-        < img src="https://th.bing.com/th/id/R.ee882d5d127ffc6cc04bd763079797df?rik=ShyQFRHsQ45Fbg&pid=ImgRaw&r=0" alt="for the boys">
-
-        <p>speeding down streets with a modified camaro used to be a dream till last year</p>
-         <img src="https://i.pinimg.com/originals/bf/51/8e/bf518e5062acfbe7151ff43c8ee1e997.jpg"  alt="camaro my baby" class="carousel-img">
-
-        
-        <p>I also aim to add a Rolls-Royce Cullinan to my collection:</p>
-        <img src="https://cdn.motor1.com/images/mgl/bgYgKk/s4/obj-rollsroycecullinan-main.jpg" alt="Rolls-Royce Cullinan">
-
-        <p> For meetings and important dates i drop with my mercedez benze-AMG G63 </p>
-         <img src="https://th.bing.com/th/id/OIP.o2BcOQq3Msq9HjIykPmicAHaEK?w=3840&h=2160&rs=1&pid=ImgDetMain" alt="luxury">
-
-        
-        <p>And for off-roading, the Mercedes-Benz G 63 AMG 6x6 is unbeatable, riding this with the boys feels great and take it for events like braais,camping and touring bthe nature:</p>
-        <img src="https://th.bing.com/th/id/OIP.wqCEsugWLKvvQOf1q-YdYQHaEo?rs=1&pid=ImgDetMain.jpg" alt="Mercedes-Benz G 63 AMG 6x6">
-
-        <section id="specs">
-            <h2>Car Specifications</h2>
-            <table>
-                <tr>
-                    <th>Car Model</th>
-                         <th>Engine</th>
-                <th>Horsepower</th>
-                </tr>
-                <tr>
-                    <td>Lamborghini Urus</td>
-                          <td>V8 Twin-Turbo</td>
-                <td>650 HP</td>
-                </tr>
-                <tr>
-                    <td>Rolls-Royce Cullinan</td>
-                    <td>V12 Twin-Turbo</td>
-                    <td>563 HP</td>
-                </tr>
-            </table>
-        </section>
-
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <form action="submit_form.php" method="post">
-                <label for="name">Your Name:</label><br>
-                <input type="text" id="name" name="name" required><br><br>
-                <label for="phone">Your Number:</label><br>
-                <input type="number" id="phone" name="phone" required><br><br>
-                <input type="submit" value="Submit">
-            </form>
-        </section>
-    </main>
-
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2025 Mr Theo Arnold Gaopalelwe</p>
-    </footer>
+    <!-- Scroll to Bottom Button -->
+    <button class="scroll-to-bottom" onclick="window.scrollTo(0, document.body.scrollHeight);">Scroll to Bottom</button>
 
     <!-- Scroll to Top Button -->
     <button class="scroll-to-top" onclick="window.scrollTo(0, 0);">Back to Top</button>

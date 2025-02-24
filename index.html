@@ -27,101 +27,100 @@
             position: relative;
             overflow-x: hidden;
             scroll-behavior: smooth;
-        }
+       /* Overlay to ensure readability of text */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 75%;
+    height: 50%;
+    background: rgba(0, 0, 0, 0.5); /* Corrected the syntax */
+    z-index: 1;
+}
 
-        /* Overlay to ensure readability of text */
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 75%;
-            height: 50%;
-            background:white(0, 0, 0, 0.5);
-            z-index: 1;
-        }
+/* Header Section */
+header {
+    text-align: center;
+    padding: 75px;
+    background-color: rgba(51, 51, 51, 0.7); /* Corrected the syntax */
+    z-index: 2;
+    position: relative;
+}
 
-        /* Header Section */
-        header {
-            text-align: center;
-            padding: 75px;
-            background-color: white(51, 51, 51, 0.7);
-            z-index: 2;
-            position: relative;
-        }
+header h1 {
+    font-size: 3em;
+    margin: 0;
+}
 
-        header h1 {
-            font-size: 3em;
-            margin: 0;
-        }
+header p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
 
-        header p {
-            font-size: 1.2em;
-            margin-top: 10px;
-        }
+/* Slideshow Section */
+.carousel {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
 
-        /* Slideshow Section */
-        .carousel {
-            position: relative;
-            width: 80%;
-            max-width: 600px;
-            margin: auto;
-            overflow: hidden;
-            border-radius: 10px;
-        }
+.carousel-images {
+    display: flex;
+    transition: transform 1s ease-in-out;
+    width: 400%; /* Adjusted for 4 images */
+}
 
-        .carousel-images {
-            display: flex;
-            transition: transform 1s ease-in-out;
-            width: 600%; /* We have 4 images, adjust accordingly */
-        }
+.carousel-img {
+    width: 60%; /* Adjusted the image size to 60% */
+    height: auto;
+    border-radius: 10px;
+}
 
-        .carousel-img {
-            width: 80%;
-            height: auto;
-            border-radius: 10px;
-        }
+/* Keyframes for automatic sliding */
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    33.33% {
+        transform: translateX(-100%);
+    }
+    66.66% {
+        transform: translateX(-200%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
 
-        /* Keyframes for automatic sliding */
-        @keyframes slide {
-            0% {
-                transform: translateX(0);
-            }
-            33.33% {
-                transform: translateX(-100%);
-            }
-            66.66% {
-                transform: translateX(-200%);
-            }
-            100% {
-                transform: translateX(0);
-            }
-        }
+/* Apply the animation to carousel */
+.carousel-images {
+    animation: slide 9s infinite; /* 9 seconds for one full cycle */
+}
 
-        /* Apply the animation to carousel */
-        .carousel-images {
-            animation: slide 9s infinite; /* 9 seconds for one full cycle */
-        }
+/* Main Content */
+main {
+    z-index: 2;
+    position: relative;
+    text-align: center;
+    margin: 75px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* Corrected the syntax */
+    border-radius: 15px;
+}
 
-        /* Main Content */
-        main {
-            z-index: 2;
-            position: relative;
-            text-align: center;
-            margin: 75px;
-            padding: 20px;
-            background-color: white(0, 0, 0, 0.7);
-            border-radius: 15px;
-        }
+/* Footer */
+footer {
+    z-index: 2;
+    position: relative;
+    text-align: center;
+    margin-top: 40px;
+    background-color: rgba(51, 51, 51, 0.7); /* Corrected the syntax */
+    padding: 20px;
+}
 
-        /* Footer */
-        footer {
-            z-index: 2;
-            position: relative;
-            text-align: center;
-            margin-top: 40px;
-            background-color: white(51, 51, 51, 0.7);
-            padding: 20px;
-        }
     </style>
 </head>
 

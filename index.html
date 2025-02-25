@@ -32,7 +32,7 @@
             left: 0;
             width: 100%;
             height: 50%;
-            background: rgba(0, 0, 0, 0.5); /* Corrected RGBA syntax */
+            background: rgba(0, 0, 0, 0.5); /* Corrected background */
             z-index: 1;
         }
 
@@ -55,7 +55,7 @@
             margin-top: 10px;
         }
 
-        /* Slideshow Section */
+        /* Car Slideshow Section */
         .carousel {
             position: relative;
             width: 80%;
@@ -131,7 +131,7 @@
             background-color: yellow;
             color: black;
             padding: 10px 20px;
-            border: 2px solid black;
+            border: bold black;
             font-size: 1.2em;
             cursor: pointer;
             border-radius: 5px;
@@ -144,12 +144,53 @@
             right: 20px;
             transform: translateX(-50%);
             background-color: yellow;
-            color: black;
+            color: white;
             padding: 10px 20px;
-            border: 2px solid black;
+            border: solid black;
             font-size: 1.2em;
             cursor: pointer;
             border-radius: 5px;
+        }
+
+        /* Contact Info Styles */
+        .contact-info {
+            background-image: url('https://s3.amazonaws.com/captainkimo/wp-content/uploads/2015/07/Beautiful-Morning-at-the-Beach-in-Carlin-Park.jpg'); /* Corrected background image */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .contact-info h2 {
+            margin-top: 0;
+            color: white;
+        }
+
+        .contact-info p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: white;
+        }
+
+        .contact-info a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: rgba(51, 51, 51, 0.7);
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
         }
     </style>
 </head>
@@ -207,32 +248,28 @@
 
         <p>And for off-roading, the Mercedes-Benz G 63 AMG 6x6 is unbeatable. Riding this with the boys feels great and taking it for events like braais, camping, and nature tours is always fun:</p>
         <img src="https://th.bing.com/th/id/OIP.wqCEsugWLKvvQOf1q-YdYQHaEo?rs=1&pid=ImgDetMain.jpg" alt="Mercedes-Benz G 63 AMG 6x6" style="max-width: 90%;">
-
-        <p>There is a comfortable my uncle rides, quite good and got speed too Toyota GD6. Good car as one can use it in cities and cattle posts, it's just a super car good for any terrain.</p>
-        <img src="https://cleanbakkiesnamibia.com/wp-content/uploads/2023/09/IMG-20230921-WA0010.jpg" alt="low key fav car">
     </main>
-
+<!-- third Page Content -->
+    <main id="thirdPageContent">
+    
     <!-- Contact Information Section -->
     <main>
-        <header>
-            <h1>Contact Information</h1>
-        </header>
         <section class="contact-info">
             <h2>My Contact Details</h2>
-            <p>If you have any questions about my car collection, feel free to reach out to us:</p>
+            <p>If you have any questions about my car collection, feel free to reach out:</p>
             <p><strong>Email:</strong> <a href="mailto:gaopalelwetheoanold@gmail.com">gaopalelwetheoanold@gmail.com</a></p>
             <p><strong>Phone:</strong> (+267) 72706831</p>
             <p><strong>Address:</strong> Platinum hotel street, Gaborone, Tlokweng, ZIP</p>
         </section>
     </main>
 
-    <!-- Scroll to Top Button -->
-    <button class="scroll-to-top" onclick="window.scrollTo(0, 0);">Back to Top</button>
-
     <!-- Footer Section -->
     <footer>
         <p>&copy; 2025 Mr Theo Arnold Gaopalelwe</p>
     </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" onclick="window.scrollTo(0, 0);">Back to Top</button>
 
 </body>
 

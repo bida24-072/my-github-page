@@ -95,7 +95,7 @@
         const password = document.getElementById('password').value;
 
         // Example check for sign-in (can be replaced with server-side validation)
-        if (username === 'user' && password === 'password123') {
+        if (username === 'user' && password f=== 'password123') {
             alert('Sign-in successful!');
             // Redirect or handle success (e.g., window.location.href = '/dashboard';)
         } else {

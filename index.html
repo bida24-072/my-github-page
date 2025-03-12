@@ -124,37 +124,9 @@
             margin-top: 20px;
             background-color: rgba(51, 51, 51, 0.7);
             padding: 10px;
-        }
+    
 
-        /* Scroll to Bottom Button */
-        .scroll-to-bottom {
-            position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: yellow;
-            color: black;
-            padding: 10px 20px;
-            border: bold black;
-            font-size: 1.2em;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-
-        /* Scroll to Top Button */
-        .scroll-to-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: yellow;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            font-size: 1.2em;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-
+       
         /* Contact Info Styles */
         .contact-info {
             background-image: url('https://th.bing.com/th/id/OIP.n-uPmPv4RPDvVH3x0R30hwHaE8?w=640&h=427&rs=1&pid=ImgDetMain'); /* Corrected background image */
@@ -198,11 +170,14 @@
     </style>
 </head>
 <body>
+    <link rel="style.css" href="style.css">
+    <link rel="contactpage.html" href="contact.html">
+    <link rel="about.html" href="about.html">
 
     <!-- Header Section -->
     <header>
         <h1>Welcome to Arnold's Garage</h1>
-        <p>Your one-stop shop for cars, trucks, and luxury vehicles!</p>
+        <p>Your one-stop garage for cars, trucks, and luxury vehicles!</p>
     </header>
 
     <!-- Car Slideshow Section -->
@@ -223,14 +198,9 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Arnold's Garage | All rights reserved</p>
+        <p>&copy; Arnold's Garage</p>
     </footer>
 
-    <!-- Scroll to Top Button -->
-    <button class="scroll-to-top" onclick="window.scrollTo(0, 0);">Back to Top</button>
     
-    <!-- Scroll to Bottom Button -->
-    <button class="scroll-to-bottom" onclick="window.scrollTo(0, document.body.scrollHeight);">Scroll to Bottom</button>
-
 </body>
 </html>

@@ -4,7 +4,7 @@
             margin: 0;
             padding: 0;
             background-color: #fff;
-            background-image: url('https://th.bing.com/th/id/OIP.V796Gb2YOOHaUIfTob-pzwHaEZ?rs=1&pid=ImgDetMain'); /* Add your background image URL here */
+            background-image: url('https://th.bing.com/th/id/R.95e337cf94baebbfc2a64fa13d9c19c2?rik=6G9rExto4joZNQ&pid=ImgRaw&r=0'); /* Add your background image URL here */
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
@@ -90,7 +90,7 @@
 
         /* Apply the animation to carousel */
         .carousel-images {
-            animation: slide 12s infinite; /* Adjusted to 12 seconds for smoother transition */
+            animation: slide 9s infinite; /* Adjusted to 9 seconds for smoother transition */
         }
 
         /* Main Content */
@@ -112,41 +112,11 @@
             margin-top: 20px;
             background-color: white(51, 51, 51, 0.7);
             padding: 10px;
-        }
-
-        /* Scroll to Bottom Button */
-        .scroll-to-bottom {
-            position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: yellow;
-            color: black;
-            padding: 10px 20px;
-            border: bold black;
-            font-size: 1.2em;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-
-        /* Scroll to Top Button */
-        .scroll-to-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            transform: translateX(-50%);
-            background-color: yellow;
-            color: white;
-            padding: 10px 20px;
-            border: white;
-            font-size: 1.2em;
-            cursor: pointer;
-            border-radius: 5px;
-        }
+        
 
         /* Contact Info Styles */
         .contact-info {
-            background-image: url('https://th.bing.com/th/id/OIP.n-uPmPv4RPDvVH3x0R30hwHaE8?w=640&h=427&rs=1&pid=ImgDetMain'); /* Corrected background image */
+            background-image: url('https://img.freepik.com/premium-photo/pink-wave-with-word-ocean-it_147644-2585.jpg'); /* Corrected background image */
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);

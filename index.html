@@ -3,83 +3,234 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mr Arnold's Garage</title>
-   <meta charset="UTF-8">
-<link rel="style.css" href="styles.css">
- <link rel="contactpage" href="contactpage.html">
-    <link rel="about.html" href="about.html">
+    <title>Arnold's Garage</title>
+    <style>
+        /* Basic styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            background-image: url('https://th.bing.com/th/id/OIP.V796Gb2YOOHaUIfTob-pzwHaEZ?rs=1&pid=ImgDetMain'); /* Background image */
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            position: relative;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
 
-    
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        /* Overlay to ensure readability of text */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background: rgba(0, 0, 0, 0.5); /* Corrected background */
+            z-index: 1;
+        }
 
-<title>About Me</title>
+        /* Header Section */
+        header {
+            text-align: center;
+            padding: 75px;
+            background-color: rgba(51, 51, 51, 0.7); /* Corrected background */
+            z-index: 2;
+            position: relative;
+        }
 
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        /* Car Slideshow Section */
+        .carousel {
+            position: relative;
+            width: 80%;
+            max-width: 600px;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .carousel-images {
+            display: flex;
+            transition: transform 1s ease-in-out; /* Smooth transition */
+            width: 400%; /* 4 images, so width = 4 x 100% */
+        }
+
+        .carousel-img {
+            width: 25%; /* Each image takes up 25% of the width */
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* Keyframes for automatic sliding */
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+
+            33.33% {
+                transform: translateX(-100%);
+            }
+
+            66.66% {
+                transform: translateX(-200%);
+            }
+
+            100% {
+                transform: translateX(-300%);
+            }
+        }
+
+        /* Apply the animation to carousel */
+        .carousel-images {
+            animation: slide 12s infinite; /* Auto-slide images every 12 seconds */
+        }
+
+        /* Optional: Adding hover effect to pause the animation */
+        .carousel:hover .carousel-images {
+            animation-play-state: paused; /* Pause on hover */
+        }
+
+        /* Main Content */
+        main {
+            z-index: 2;
+            position: relative;
+            text-align: center;
+            margin: 75px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7); /* Corrected background */
+            border-radius: 15px;
+        }
+
+        /* Footer */
+        footer {
+            z-index: 2;
+            position: relative;
+            text-align: center;
+            margin-top: 20px;
+            background-color: rgba(51, 51, 51, 0.7);
+            padding: 10px;
+        }
+
+        /* Scroll to Bottom Button */
+        .scroll-to-bottom {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: yellow;
+            color: black;
+            padding: 10px 20px;
+            border: bold black;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        /* Scroll to Top Button */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: yellow;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        /* Contact Info Styles */
+        .contact-info {
+            background-image: url('https://th.bing.com/th/id/OIP.n-uPmPv4RPDvVH3x0R30hwHaE8?w=640&h=427&rs=1&pid=ImgDetMain'); /* Corrected background image */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            background-size: cover;
+            background-position: right center;
+            background-repeat: no-repeat;
+        }
+
+        .contact-info h2 {
+            margin-top: 0;
+            color: white;
+        }
+
+        .contact-info p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: white;
+        }
+
+        .contact-info a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: rgba(51, 51, 51, 0.7);
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
 </head>
-
 <body>
 
-<header>
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to Arnold's Garage</h1>
+        <p>Your one-stop shop for cars, trucks, and luxury vehicles!</p>
+    </header>
 
-<h1>About Me</h1>
-
-<nav>
-
-<a href="index.html">Home</a> |
-
-<a href="about.html">About Arnold's garage</a> |
-
-<a href="contact.html">Contact The Garage</a>
-
-</nav>
- 
-   
+    <!-- Car Slideshow Section -->
+    <div class="carousel">
+        <div class="carousel-images">
+            <img src="https://i.ytimg.com/vi/tjFr0l4hBdw/maxresdefault.jpg" alt="A perfect car" class="carousel-img">
+            <img src="https://i.pinimg.com/originals/bf/51/8e/bf518e5062acfbe7151ff43c8ee1e997.jpg" alt="Camaro my baby" class="carousel-img">
+            <img src="https://th.bing.com/th/id/R.1fa9ec0b930fce2987bc334d1aa1e7ab?rik=BkTZINmWjY%2fkYA&pid=ImgRaw&r=" alt="Lamborghini Urus" class="carousel-img">
+            <img src="https://www.millermotorcars.com/imagetag/3162/3/l/Used-2019-Rolls-Royce-Cullinan.jpg" alt="Rolls-Royce Cullinan" class="carousel-img">
+        </div>
     </div>
 
     <!-- Main Content -->
     <main>
-        <p>Some cars are built for speed, others for tough terrains. My collection celebrates all kinds of luxury, performance, and innovation.</p>
+        <h2>Explore Our Garage</h2>
+        <p>At Arnold's Garage, we specialize in high-quality cars, trucks, and luxury vehicles. Whether you're looking for something practical or a high-end ride, we've got you covered.</p>
     </main>
 
-    <!-- Scroll to next section -->
-    <div style="text-align: center;">
-        <a href="#secondPageContent" style="color: gold; font-size: 1.5em; text-decoration: none; padding: 10px;">Scroll to explore more</a>
-    </div>
-
-    <!-- Second Page Content -->
-    <main id="secondPageContent">
-        <h2>My Cars and Their Stories</h2>
-        <p>Here's a picture of my first car 2022 Ram 1500 TRX :</p>
-        <img src="https://i.pinimg.com/736x/bd/ce/f5/bdcef5844180693af29405def2c993c7.jpg" alt="best car ever" style="max-width: 90%;">
-
-        <p>Manoeuvring around town with my <strong>Lamborghini Urus</strong> is a dream come true:</p>
-        <img src="https://www.carscoops.com/wp-content/uploads/2017/12/lambo-urus-performante-render-2.jpg" alt="Lamborghini Urus" style="max-width: 90%;">
-
-        <p>Some folks of mine suggested I buy this speedy ride and from their suggestion I added color blue while they wanted gold.</p>
-        <img src="https://th.bing.com/th/id/R.ee882d5d127ffc6cc04bd763079797df?rik=ShyQFRHsQ45Fbg&pid=ImgRaw&r=0" alt="For the boys" style="max-width: 90%;">
-
-        <p>Speeding down streets with a modified Camaro used to be a dream till last year:</p>
-        <img src="https://i.pinimg.com/originals/bf/51/8e/bf518e5062acfbe7151ff43c8ee1e997.jpg" alt="Camaro my baby" style="max-width: 90%;">
-
-        <p>I also aim to add a <strong>Rolls-Royce Cullinan</strong> to my collection:</p>
-        <img src="https://cdn.motor1.com/images/mgl/bgYgKk/s4/obj-rollsroycecullinan-main.jpg" alt="Rolls-Royce Cullinan" style="max-width: 90%;">
-
-        <p>For meetings and important dates, I drop with my <strong>Mercedes-Benz AMG G63</strong>:</p>
-        <img src="https://th.bing.com/th/id/OIP.OT0nQPqwvdQUDN0sZtchVQHaEK?w=650&h=366&rs=1&pid=ImgDetMain" alt="Luxury" style="max-width: 90%;">
-
-        <p>And for off-roading, the Mercedes-Benz G 63 AMG 6x6 is unbeatable. Riding this with the boys feels great and taking it for events like braais, camping, and nature tours is always fun:</p>
-        <img src="https://th.bing.com/th/id/OIP.wqCEsugWLKvvQOf1q-YdYQHaEo?rs=1&pid=ImgDetMain.jpg" alt="Mercedes-Benz G 63 AMG 6x6" style="max-width: 90%;">
-        <p>In my family we drive the big cars,FORD RAPTOR TRUCK all because they serve many purposes being able serve as loaders,used as rides for important events being weddings,parties and etc</p>
-        <img src="https://i.pinimg.com/736x/49/03/b4/4903b4815a5b5c6256566532be7782e2.jpg" alt="Ford raptor truck"
-    </main>
-
-       
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Mr Theo Arnold Gaopalelwe</p>
+        <p>&copy; 2025 Arnold's Garage | All rights reserved</p>
     </footer>
 
     <!-- Scroll to Top Button -->
     <button class="scroll-to-top" onclick="window.scrollTo(0, 0);">Back to Top</button>
+    
+    <!-- Scroll to Bottom Button -->
+    <button class="scroll-to-bottom" onclick="window.scrollTo(0, document.body.scrollHeight);">Scroll to Bottom</button>
 
 </body>
-
 </html>

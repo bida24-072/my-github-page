@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scroll to Top Button Example</title>
+  <style>
+    /* Style for the scroll-to-top button */
+    .scroll-to-top {
+      display: none; /* Initially hidden */
+      position: fixed; /* Fixed position at the bottom-right of the page */
+      bottom: 20px; /* Space from the bottom */
+      right: 20px; /* Space from the right */
+      background-color: #333; /* Dark background */
+      color: white; /* White text */
+      border: none; /* No border */
+      padding: 10px 20px; /* Padding around the text */
+      font-size: 16px; /* Font size */
+      cursor: pointer; /* Pointer cursor on hover */
+      border-radius: 5px; /* Rounded corners */
+      z-index: 1000; /* Make sure the button is on top */
+    }
+
+    .scroll-to-top:hover {
+      background-color: #ff9900; /* Hover color */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Content of your page -->
+  <div style="height: 1500px;">
+    <h1>Scroll Down to See the Button</h1>
+    <p>This is a long content page to demonstrate the scroll-to-top button functionality.</p>
+  </div>
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-to-top" onclick="window.scrollTo(0, 0);">Back to Top</button>
+
+  <script>
+    // Get the button
+    const scrollToTopButton = document.querySelector('.scroll-to-top');
+
+    // Show the button when the user scrolls down 300px from the top of the document
+    window.onscroll = function() {
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        scrollToTopButton.style.display = 'block'; // Show button
+      } else {
+        scrollToTopButton.style.display = 'none'; // Hide button
+      }
+    };
+  </script>
+  
+</body>
+</html>

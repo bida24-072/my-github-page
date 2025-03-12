@@ -184,3 +184,12 @@
             width: 100%;
             bottom: 0;
         }
+ <!-- Car Slideshow Section -->
+    <div class="carousel">
+        <div class="carousel-images">
+            <img src="https://i.ytimg.com/vi/tjFr0l4hBdw/maxresdefault.jpg" alt="A perfect car" class="carousel-img">
+            <img src="https://i.pinimg.com/originals/bf/51/8e/bf518e5062acfbe7151ff43c8ee1e997.jpg" alt="Camaro my baby" class="carousel-img">
+            <img src="https://th.bing.com/th/id/R.1fa9ec0b930fce2987bc334d1aa1e7ab?rik=BkTZINmWjY%2fkYA&pid=ImgRaw&r=" alt="Lamborghini Urus" class="carousel-img">
+            <img src="https://www.millermotorcars.com/imagetag/3162/3/l/Used-2019-Rolls-Royce-Cullinan.jpg" alt="Rolls-Royce Cullinan" class="carousel-img">
+        </div>
+    </div>

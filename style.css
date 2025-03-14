@@ -1,4 +1,7 @@
  <!-- Link to external index.html file -->
+ <link rel="index.html" href="index.html">
+ <link rel="carslideshow.html" href="carslideshow.html">
+ <link rel="contactpage.html" href="contactpage.html">
 
 /* Basic styles */
 body {

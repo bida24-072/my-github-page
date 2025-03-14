@@ -19,17 +19,13 @@
             transition: transform 0.5s ease-in-out; /* Smooth transition when sliding */
         }
 
-        /* Individual image styling */
+        /* Individual image styling - Reduced to 50% of the container's width */
         .carousel-img {
-            width: 100%;
+            width: 50%; /* Set the width to 50% to reduce the size */
             height: auto;
             flex-shrink: 0; /* Prevents images from shrinking */
-        }
-
-        /* Optional: Add a border or shadow to images for a nice visual effect */
-        .carousel-img {
             border-radius: 10px;
-            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Optional visual effect */
         }
     </style>
 </head>
@@ -55,7 +51,7 @@
     function showNextImage() {
         currentIndex = (currentIndex + 1) % totalImages; // Loop back to first image
         const carouselImages = document.querySelector('.carousel-images');
-        carouselImages.style.transform = `translateX(-${currentIndex * 100}%)`; // Slide to the next image
+        carouselImages.style.transform = `translateX(-${currentIndex * 50}%)`; // Slide to the next image
     }
 
     // Change image every 3 seconds

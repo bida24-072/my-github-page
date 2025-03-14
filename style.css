@@ -8,7 +8,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #fff;
+    background-color:white ;
     background-image: url('https://th.bing.com/th/id/R.95e337cf94baebbfc2a64fa13d9c19c2?rik=6G9rExto4joZNQ&pid=ImgRaw&r=0'); /* Add your background image URL here */
     background-position: center;
     background-size: cover;
@@ -105,7 +105,7 @@ main {
     text-align: center;
     margin: 75px;
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.7); /* Corrected background using rgba */
+    background-color: white; /* Corrected background using rgba */
     border-radius: 15px;
 }
 
@@ -115,7 +115,7 @@ footer {
     position: relative;
     text-align: center;
     margin-top: 20px;
-    background-color: rgba(51, 51, 51, 0.7); /* Corrected background using rgba */
+    background-color: white(); /* Corrected background using rgba */
     padding: 10px;
 }
 
@@ -124,7 +124,7 @@ footer {
     background-image: url('https://img.freepik.com/premium-photo/pink-wave-with-word-ocean-it_147644-2585.jpg'); /* Corrected background image */
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: white);
     background-size: cover;
     background-position: right;
     background-repeat: no-repeat;
@@ -151,7 +151,7 @@ footer {
 }
 
 footer {
-    background-color: rgba(51, 51, 51, 0.7);
+    background-color: white;
     color: #fff;
     text-align: center;
     padding: 10px;
